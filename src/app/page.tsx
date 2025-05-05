@@ -2,12 +2,13 @@ import Image from 'next/image';
 import logo from '../../public/Logo.png';
 import google_svg from '../../public/Google svg.svg';
 import toggle from '../../public/toggle.png';
+import hero from '../../public/hero.png';
 
 export default function Home() {
   return (
     <div className="flex mt-[24px] mb-[24px] mr-[24px] ml-[72px]">
       {/* left hand side elements */}
-      <div className='w-[590px]'>
+      <div className='w-[590px] mr-[48px]'>
         <Image src={logo} alt='website logo' className='w-[163px] h-[40px]' />
         <div className='w-[525px]'>
           <h1 className='mt-[70px] text-[white] font-inter font-medium text-[40px] mb-[16px]'>Welcome back to Room.me!</h1>
@@ -58,8 +59,21 @@ export default function Home() {
       </div>
 
       {/* right hand side elements */}
-      <div>
+      <div className='relative'>
+        <Image src={hero} alt='Hero Image of the website'/>
 
+        <div className='mb-[30px] absolute bottom-0 left-0 w-[560px] backdrop-blur-[20px] rounded-[20px] px-[24px] py-[16px] ml-[25px]'>
+          <p className='mb-[24px] w-[500px] text-[30px] text-white '>“We love the screen sharing and whiteboarding features, which have improved our presentations. Room.me has become an essential tool for our team, allowing us to collaborate effectively. Highly recommended!”</p>
+          <p className='text-[24px] text-white font-medium'>Sarah Markivoc - Project Manager</p>
+        </div>
+
+        <div className='mb-[10px] absolute bottom-0 left-0 grid grid-cols-5 gap-2 pt-[20px] ml-[40px]'>
+          <div className='bg-linear-to-r from-[#8B80FF] to-[#5C53BC] w-[100px] h-[8px] rounded-[40px]' ></div>
+          <div className='bg-white/60 w-[100px] h-[8px] rounded-[40px]'></div>
+          <div className='bg-white/60 w-[100px] h-[8px] rounded-[40px]'></div>
+          <div className='bg-white/60 w-[100px] h-[8px] rounded-[40px]'></div>
+          <div className='bg-white/60 w-[100px] h-[8px] rounded-[40px]'></div>
+        </div>
       </div>
     </div>
   );

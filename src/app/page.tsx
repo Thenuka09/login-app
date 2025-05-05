@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import logo from '../../public/Logo.png';
+import google_svg from '../../public/Google svg.svg';
 
 export default function Home() {
   return (
@@ -26,10 +27,12 @@ export default function Home() {
 
             <div className='flex flex-col'>
               <button>Sign in</button>
-              <button>Sign in with Google</button>
+              <div className='flex'>
+                <Image src={google_svg} alt='google svg' className=''/>
+                <button>Sign in with Google</button>
+              </div>
+              
             </div>
-
-            
           </form>
 
           <div>
@@ -44,10 +47,6 @@ export default function Home() {
             <span>Does not have an account?</span>
             <button>Sign Up</button>
           </div>
-
-
-          
-
 
         </div>
       </div>

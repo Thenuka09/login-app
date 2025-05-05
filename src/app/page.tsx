@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import logo from '../../public/Logo.png';
 import google_svg from '../../public/Google svg.svg';
+import toggle from '../../public/toggle.png';
 
 export default function Home() {
   return (
@@ -22,7 +23,10 @@ export default function Home() {
 
             <div className='flex flex-col mb-[24px]'>
               <label className='text-[22px] text-[white] font-medium font-inter mb-[16px]'>Password</label>
-              <input type="password" className='h-[62px] w-[592px] bg-[#1D1D21] text-[white] border border-[#383838] rounded-[8px] px-[24px] py-[16px]' placeholder='Enter your email address' />
+                <div className='relative w-[592px]'>
+                  <input type="password" className='h-[62px] w-[592px] bg-[#1D1D21] text-[white] border border-[#383838] rounded-[8px] px-[24px] py-[16px]' placeholder='Enter your email address' />
+                  <Image src={toggle} alt='toggle' className='absolute right-[16px] top-1/2 transform -translate-y-1/2 w-[24px] h-[24px] cursor-pointer' />
+                </div>
             </div>
 
             <div className='flex flex-col'>
@@ -50,8 +54,6 @@ export default function Home() {
               <button className='font-semibold underline underline-offset-2 cursor-pointer'>Sign Up</button>
             </div>
           </form>
-
-
         </div>
       </div>
 
